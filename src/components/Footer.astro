@@ -1,0 +1,11 @@
+---
+interface Props {
+  year?: string;
+}
+
+const { year = new Date().getUTCFullYear() } = Astro.props;
+---
+
+<footer class="container-fluid text-center p-5 bg-body-tertiary">
+  {year} © Awesome Company
+</footer>

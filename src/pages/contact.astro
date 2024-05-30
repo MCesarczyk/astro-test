@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contac page">
+  <h1>Contact</h1>
+  <hr />
+
+  <div class="row">
+    <div class="col-min-vh-100">
+      <h2>Get in touch</h2>
+      <p>
+        street 3 central street <br />
+        12345 city <br />
+        country <br />
+        <a href="mailto: janusz@nosacz.pl">
+      </p>
+    </div>
+    <div class="col">
+      <Image src="https://images.unsplash.com/photo-1715523692156-77aebf1a1d43?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Contact" class="" width={360} height={480}  />
+    </div>
+  </div>
+</Layout>
