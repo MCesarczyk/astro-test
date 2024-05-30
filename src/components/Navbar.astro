@@ -1,4 +1,6 @@
 ---
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+
 const links = [
   { url: "/", label: "Home" },
   { url: "/about", label: "About" },
@@ -9,7 +11,7 @@ const links = [
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Klak</a>
-    <button class="navbar-toggler" type="button">
+    <button class="navbar-toggler" type="button" aria-label="Hamburger menu button">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse w-100" id="navbarNav">
@@ -17,9 +19,14 @@ const links = [
         {
           links.map((link) => (
             <li class="nav-item">
-              <a class="nav-link" href={link.url}>{link.label}</a>
+              <a class="nav-link" href={link.url}>
+                {link.label}
+              </a>
             </li>
           ))
         }
       </ul>
+      <ThemeSwitcher />
+    </div>
+  </div>
 </nav>
